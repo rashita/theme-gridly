@@ -140,28 +140,6 @@
               <p>{{ post.content|striptags|truncate(200) }}</p>
               <p class="post-link"><a href="{{ post.permalink }}">View more &rarr;</a></p>
 
-              <ul style="list-style:none;margin:10px 0;">
-<!-- ここからTwitter -->
-<li style="float:left;margin-right:8px;width:100px;height:30px;"><a href="https://twitter.com/share" class="twitter-share-button" data-count="twitter-share-button">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<!-- ここまでTwitter -->
-<!-- ここからGoogle+ -->
-<li style="float:left;margin-right:8px;width:70px;height:30px;"><div class="g-plusone" data-size="medium"></div>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<!-- ここまでGoogle+ -->
-<!-- ここからFacebook -->
-<li style="float:left;margin-right:8px;width:120px;height:30px;"><div class="fb-like" data-href="{{ site.base_url }}{{ post.permalink }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-<div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
-<!-- ここまでFacebook -->
-
-<!-- ここからPocket -->
-<li style="float:left;margin-right:8px;width:105px;height:30px;"><a data-pocket-label="pocket" data-save-url="{{ site.base_url }}{{ post.permalink }}" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
-<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
-<!-- ここまでPocket -->
-</ul>
-<br clear="all"/>
-<br/>
-
               {% endif %}
             </div>
           </article>
@@ -193,6 +171,27 @@
             {{ theme.social.bar }}
             {% if post.tags %}
               <p><strong>Tags:</strong> {{ post.tags|format_tags(humanize=True) }}</p>
+                            <ul style="list-style:none;margin:10px 0;">
+<!-- ここからTwitter -->
+<li style="float:left;margin-right:8px;width:100px;height:30px;"><a href="https://twitter.com/share" class="twitter-share-button" data-count="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<!-- ここまでTwitter -->
+<!-- ここからGoogle+ -->
+<li style="float:left;margin-right:8px;width:70px;height:30px;"><div class="g-plusone" data-size="medium"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<!-- ここまでGoogle+ -->
+<!-- ここからFacebook -->
+<li style="float:left;margin-right:8px;width:120px;height:30px;"><div class="fb-like" data-href="{{ site.base_url }}{{ post.permalink }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+<!-- ここまでFacebook -->
+
+<!-- ここからPocket -->
+<li style="float:left;margin-right:8px;width:105px;height:30px;"><a data-pocket-label="pocket" data-save-url="{{ site.base_url }}{{ post.permalink }}" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+<!-- ここまでPocket -->
+</ul>
+<br clear="all"/>
+<br/>
             {% endif %}
           </div>
         </section>
